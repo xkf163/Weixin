@@ -57,8 +57,10 @@ JSSignature jt =  WeixinUtil.getJSSignature(url);
 </table>
 <br><br>
 <button id="btn" style="font-size:50px" onclick="gethaha()">开始导航</button>
-<br><br>
+<br>
+<br>
 <form action="push.do?action=push" method="POST">
+  <p><h4>模板消息功能：</h4></p>
   <p>openid: <input type="text" name="openid" value="<%=jsonObject.getString("openid") %>" /></p>
   <p>templateMessageType: <input type="text" name="templateMessageType" value="requesting" /></p>
   <input type="submit" style="font-size:50px" value="提交申请" />
