@@ -6,6 +6,7 @@
     <servlet-class>com.xkf.servlet.InitServlet</servlet-class>
     <load-on-startup>0</load-on-startup>
   </servlet>
+  
   <servlet>
     <servlet-name>weixinServlet</servlet-name>
     <servlet-class>com.xkf.servlet.WeixinServlet</servlet-class>
@@ -14,6 +15,8 @@
     <servlet-name>weixinServlet</servlet-name>
     <url-pattern>/wx.do</url-pattern>
   </servlet-mapping>
+  
+  
   <servlet>
     <servlet-name>menuServlet</servlet-name>
     <servlet-class>com.xkf.servlet.MenuServlet</servlet-class>
@@ -22,6 +25,8 @@
     <servlet-name>menuServlet</servlet-name>
     <url-pattern>/me.do</url-pattern>
   </servlet-mapping>
+  
+  
   <servlet>
     <servlet-name>pushMessageServlet</servlet-name>
     <servlet-class>com.xkf.servlet.PushMessageServlet</servlet-class>
@@ -30,6 +35,8 @@
     <servlet-name>pushMessageServlet</servlet-name>
     <url-pattern>/push.do</url-pattern>
   </servlet-mapping>
+  
+  
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>

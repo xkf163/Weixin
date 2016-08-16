@@ -307,30 +307,53 @@ public class WeixinUtil {
     }
 	
     
-    public static WxUser getWebUserInfo(WebAccessToken webAT){
-//    	 https://api.weixin.qq.com/sns/userinfo?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN
-    	 String acctoken=webAT.getAccess_token();
-   	 	 String openid=webAT.getOpenid();
-   	 	 
-   	     System.out.println("webacctoken:"+acctoken+"&openid:"+openid+"\n");
-   	 	 
-    	 String url = GET_WEB_USERINFO_URL.replace("ACCESS_TOKEN",acctoken).replace("OPENID", openid);
-    	 System.out.println(url);
-		 JSONObject jsonObject = doGetUrl(url);
-    	 WxUser wxUser = new WxUser();
-    	 
-
-    	 System.out.println(jsonObject.toString());
-    	 
-    	 if(jsonObject !=null & jsonObject.has("openid")){
-    		 wxUser.setOpenid(jsonObject.getString("openid"));
-    		 wxUser.setNickname(jsonObject.getString("nickname"));
-    	 }
-		 
-    	 return wxUser;
-    }
+//    public static WxUser getWebUserInfo(WebAccessToken webAT){
+////    	 https://api.weixin.qq.com/sns/userinfo?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN
+//    	 String acctoken=webAT.getAccess_token();
+//   	 	 String openid=webAT.getOpenid();
+//   	 	 
+//   	     System.out.println("webacctoken:"+acctoken+"&openid:"+openid+"\n");
+//   	 	 
+//    	 String url = GET_WEB_USERINFO_URL.replace("ACCESS_TOKEN",acctoken).replace("OPENID", openid);
+//    	 System.out.println(url);
+//		 JSONObject jsonObject = doGetUrl(url);
+//    	 WxUser wxUser = new WxUser();
+//    	 
+//
+//    	 System.out.println(jsonObject.toString());
+//    	 
+//    	 if(jsonObject !=null & jsonObject.has("openid")){
+//    		 wxUser.setOpenid(jsonObject.getString("openid"));
+//    		 wxUser.setNickname(jsonObject.getString("nickname"));
+//    	 }
+//		 
+//    	 return wxUser;
+//    }
     
 	
+	public static WxUser getWebUserInfo(WebAccessToken webAT){
+	//    	 https://api.weixin.qq.com/sns/userinfo?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN
+	    	 String acctoken=webAT.getAccess_token();
+	   	 	 String openid=webAT.getOpenid();
+	   	 	 
+	   	     System.out.println("webacctoken:"+acctoken+"&openid:"+openid+"\n");
+	   	 	 
+	    	 String url = GET_WEB_USERINFO_URL.replace("ACCESS_TOKEN",acctoken).replace("OPENID", openid);
+	    	 System.out.println(url);
+			 JSONObject jsonObject = doGetUrl(url);
+	    	 WxUser wxUser = new WxUser();
+	    	 
+	
+	    	 System.out.println(jsonObject.toString());
+	    	 
+	    	 if(jsonObject !=null & jsonObject.has("openid")){
+	    		 wxUser.setOpenid(jsonObject.getString("openid"));
+	    		 wxUser.setNickname(jsonObject.getString("nickname"));
+	    	 }
+			 
+	    	 return wxUser;
+	    }
+
 	/**
 	 * 组装菜单
 	 * @return

@@ -7,7 +7,7 @@ import com.xkf.util.WeixinUtil;
 public class AccessTokenThread implements Runnable {
 	
 	public static AccessToken accessToken;
-    public static final String rootUrl="http://xkf99.vicp.net";
+    public static final String rootUrl="http://101.201.69.249";
     public static JSTicket jsTicket;
     public static final String APPID="wx86c37be7116e10cf";
     public static final String APPSECRET="d4624c36b6795d1d99dcf0547af5443d";
